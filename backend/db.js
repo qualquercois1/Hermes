@@ -14,6 +14,8 @@ const db = new sqlite3.Database(dbPath, (erro) => {
 db.serialize(() => {
     db.run(`CREATE TABLE IF NOT EXISTS usuarios (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
+        senha TEXT,
+        role TEXT DEFAULT 'user',
         nome_usuario TEXT UNIQUE,
         saldo REAL DEFAULT 1000.00,
         data_criacao DATETIME DEFAULT CURRENT_TIMESTAMP

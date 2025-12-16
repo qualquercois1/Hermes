@@ -12,6 +12,8 @@ app.get('/', (req, res) => {
 
 app.post('/registrar', authController.criarUsuario);
 
+app.post('/login', authController.loginUsuario);
+
 const PORT = 3000;
 app.listen(PORT, () => {
     console.log(`Servidor rodando em http://localhost:${PORT}`);
