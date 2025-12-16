@@ -1,13 +1,33 @@
 const db = require('../db');
 
-function mostrarUsuarios(req, res) {
-    const sql = 'SELECT id, nome_usuario FROM usuarios';
-    db.all(sql, [], (erro, usuario) => {
-        if (erro) {
-            return res.status(500).json({ erro: erro.message });
-        }
-        res.json({ usuarios: usuario });
+// Transforma a busca do SQLite em uma Promise (para usar await no controller)
+const buscarSaldoPorId = (id) => {
+    return new Promise((resolve, reject) => {
+        const sql = 'SELECT saldo FROM usuarios WHERE id = ?';
+        
+        db.get(sql, [id], (erro, row) => {
+            if (erro) {
+                return reject(erro);
+            }
+            if (!row) {
+                return reject(new Error('Usuário não encontrado.'));
+            }
+            // Resolvemos apenas o VALOR do saldo
+            resolve(row.saldo);
+        });
     });
-}
+};
 
-module.exports = { mostrarUsuarios };
+const listarTodos = () => {
+    return new Promise((resolve, reject) => {
+        const sql = 'SELECT id, nome_usuario FROM usuarios';
+        db.all(sql, [], (erro, rows) => {
+            if (erro) return reject(erro);
+            resolve(rows);
+        });
+    });
+};
+
+// Precisamos exportar também o registrarUsuario que fizemos antes?
+// Se sim, mantenha ele aqui. Se não, adicione o código antigo aqui.
+module.exports = { buscarSaldoPorId, listarTodos };

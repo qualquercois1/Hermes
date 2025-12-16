@@ -1,0 +1,49 @@
+@font-face {
+    font-family: 'GeekFreak';
+    src: url('./assets/fonts/Greek-Freak.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+    --terracotta: #c34a36;      
+    --salmon: #d99586;          
+    --marble: #ffe5da;          
+    --aegean-blue: #00c8f4;
+
+    --gold-shiny: #FFD700;    
+    --gold-antique: #DAA520;
+
+    --text-dark: #2c1810;     
+    --text-light: #ffe5da;
+}
+
+body {
+    margin: 0;
+    font-family: 'Cinzel', serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: var(--marble);
+    color: var(--text-dark);
+}
+
+.app-container {
+    display: flex;
+    height: 100vh;
+}
+.main-content {
+    flex: 1;
+    padding: 20px;
+    background-color: var(--marble);
+    overflow-y: auto;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    font-weight: bold;
+    transition: transform 0.2s;
+}
+button:hover {
+    transform: scale(1.05);
+}

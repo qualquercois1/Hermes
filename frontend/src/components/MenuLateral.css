@@ -1,0 +1,115 @@
+/* MenuLateral.css - Versão Final Limpa */
+
+.menu-lateral {
+    width: 250px;
+    height: 100vh;
+    background-color: var(--terracotta);
+    color: var(--text-light);
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    box-sizing: border-box;
+
+    /* Detalhes da borda */
+    border-right: 3px solid var(--gold-antique);
+    box-shadow: 4px 0 15px rgba(0, 0, 0, 0.2);
+}
+
+/* --- LOGO (Imagem + Texto) --- */
+.logo-container {
+    display: flex;
+    flex-direction: column; /* Imagem em cima, texto embaixo */
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.logo-icon {
+    width: 80px; /* Tamanho ajustado para ficar proporcional */
+    height: auto;
+    margin-bottom: 15px; /* Espaço entre a imagem e o texto */
+    filter: drop-shadow(0 0 5px var(--gold-shiny)); /* Brilho dourado */
+}
+
+.menu-logo-text {
+    /* Usando a fonte GeekFreak que você gostou */
+    font-family: 'GeekFreak', 'Courier New', monospace; 
+    color: var(--gold-shiny);
+    font-size: 28px;
+    font-weight: bold;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+    
+    /* Brilho no texto */
+    text-shadow: 0px 0px 10px rgba(255, 215, 0, 0.5);
+}
+
+/* --- LINKS --- */
+.menu-links {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.link {
+    color: var(--text-light);
+    text-decoration: none;
+    font-size: 18px;
+    padding: 12px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+}
+
+.link:hover {
+    background-color: var(--salmon);
+    color: white;
+    padding-left: 20px; /* Efeito de movimento */
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+/* --- FOOTER (Info do Usuário) --- */
+.menu-footer {
+    margin-top: auto; /* Empurra para o final da tela */
+    text-align: center;
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 0.15); /* Fundo sutil */
+    border-radius: 8px;
+    border: 1px dashed var(--gold-antique);
+}
+
+.user-name {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: var(--text-light);
+    text-transform: capitalize;
+    font-size: 1rem;
+}
+
+.user-balance {
+    color: var(--gold-shiny);
+    font-size: 1.2rem;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 10px;
+}
+
+.btn-logout {
+    background: transparent;
+    border: 1px solid var(--gold-antique);
+    color: var(--gold-antique);
+    padding: 8px 20px;
+    font-size: 0.8rem;
+    border-radius: 20px; /* Botão arredondado */
+    cursor: pointer;
+    transition: all 0.3s;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.btn-logout:hover {
+    background-color: var(--gold-antique);
+    color: var(--terracotta);
+}

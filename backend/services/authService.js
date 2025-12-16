@@ -20,7 +20,7 @@ const registrarUsuario = async (nome_usuario, senha, role = 'user') => {
                 id: this.lastID, 
                 nome_usuario,
                 role,
-                saldo: 100.00 
+                saldo: 1000.00 
             });
         });
     });    

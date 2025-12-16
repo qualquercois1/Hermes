@@ -1,0 +1,40 @@
+# --- Dependências (Backend e Frontend) ---
+# Ignora node_modules na raiz e em qualquer subpasta
+node_modules/
+
+# --- Build de Produção (React/Vite) ---
+# O Vite cria essa pasta quando você roda 'npm run build'.
+# Não devemos subir o site pronto, apenas o código fonte.
+dist/
+dist-ssr/
+build/
+
+# --- Banco de Dados ---
+# Ignora qualquer arquivo de banco SQLite
+*.sqlite
+*.sqlite3
+*.db
+backend/hermes.sqlite
+
+# --- Variáveis de Ambiente e Segurança ---
+# Nunca suba chaves secretas ou configurações locais
+.env
+.env.local
+.env.*.local
+
+# --- Logs e Debug ---
+# Arquivos de erro que poluem o projeto
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+logs/
+pids/
+*.pid
+
+# --- Sistema Operacional e IDEs ---
+# Arquivos de configuração pessoal do seu PC ou Editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

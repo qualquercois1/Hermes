@@ -39,7 +39,9 @@ const loginUsuario = async (req, res) => {
             mensagem: 'Login realizado com sucesso!',
             auth: true,
             token: token,
-            role: usuario.role
+            role: usuario.role,
+            id: usuario.id,
+            nome_usuario: usuario.nome_usuario
         });
     } catch (erro) {
         return res.status(401).json({ erro: erro.message });

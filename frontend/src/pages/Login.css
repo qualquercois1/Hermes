@@ -1,0 +1,114 @@
+/* Login.css */
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Pega a altura do pai (main-content) */
+    min-height: 80vh;
+}
+
+.login-card {
+    background-color: white;
+    padding: 40px;
+    border-radius: 15px;
+    width: 100%;
+    max-width: 400px;
+    
+    /* Efeito de profundidade e borda grega */
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    border: 2px solid var(--gold-antique);
+    border-top: 5px solid var(--terracotta);
+}
+
+.login-title {
+    text-align: center;
+    font-family: 'GeekFreak', 'Courier New', monospace;
+    color: var(--terracotta);
+    margin-bottom: 10px;
+    font-size: 2rem;
+}
+
+.login-subtitle {
+    text-align: center;
+    color: #666;
+    margin-bottom: 30px;
+    font-size: 0.9rem;
+    font-family: 'Roboto', sans-serif;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: var(--text-dark);
+    font-size: 0.9rem;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    box-sizing: border-box; /* Garante que o padding não estoure a largura */
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: var(--aegean-blue);
+    box-shadow: 0 0 5px rgba(0, 200, 244, 0.3);
+}
+
+.error-message {
+    color: #d32f2f;
+    background-color: #ffebee;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.btn-login {
+    width: 100%;
+    padding: 15px;
+    background-color: var(--terracotta);
+    color: white;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn-login:hover {
+    background-color: #a33b2a; /* Um tom mais escuro */
+}
+
+.btn-login:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.login-footer {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 0.9rem;
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+}
+
+.link-register {
+    color: var(--aegean-blue);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.link-register:hover {
+    text-decoration: underline;
+}

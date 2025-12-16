@@ -1,0 +1,154 @@
+/* Home.css */
+
+.home-container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* --- Hero Section --- */
+.hero-section {
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(135deg, var(--terracotta) 0%, #a33b2a 100%);
+    border-radius: 15px;
+    color: white;
+    box-shadow: 0 10px 20px rgba(195, 74, 54, 0.3);
+    margin-bottom: 40px;
+    border: 2px solid var(--gold-antique);
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    font-family: 'GeekFreak', 'Courier New', monospace;
+    margin-bottom: 10px;
+    
+    animation: brilhoDivino 3s ease-in-out infinite alternate;
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    font-family: 'Roboto', sans-serif;
+    opacity: 0.9;
+}
+
+/* --- Botões do Hero --- */
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.btn-primary {
+    padding: 15px 40px;
+    font-size: 1.2rem;
+    background-color: var(--gold-shiny);
+    color: var(--text-dark);
+    border-radius: 30px;
+    text-transform: uppercase;
+    box-shadow: 0 4px 0 #b8860b; /* Sombra sólida para efeito 3D */
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 0 #b8860b;
+}
+
+.btn-secondary {
+    padding: 15px 40px;
+    font-size: 1.2rem;
+    background-color: transparent;
+    border: 2px solid var(--gold-shiny);
+    color: var(--gold-shiny);
+    border-radius: 30px;
+    text-transform: uppercase;
+}
+
+.btn-secondary:hover {
+    background-color: rgba(255, 215, 0, 0.1);
+}
+
+/* --- Seção de Odds (Cards) --- */
+.section-title {
+    color: var(--terracotta);
+    margin-bottom: 20px;
+    border-bottom: 2px solid var(--gold-antique);
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.bet-card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    border-left: 5px solid var(--aegean-blue);
+    transition: transform 0.3s;
+}
+
+.bet-card:hover {
+    transform: translateY(-5px);
+}
+
+.match-names {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    font-weight: bold;
+    font-family: 'Cinzel', serif;
+    color: var(--text-dark);
+}
+
+.vs {
+    color: var(--salmon);
+    font-style: italic;
+    font-size: 0.8rem;
+}
+
+.odds-buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.odd-btn {
+    flex: 1;
+    padding: 10px;
+    background-color: #f0f2f5;
+    border-radius: 5px;
+    color: var(--terracotta);
+    font-weight: bold;
+}
+
+.odd-btn:hover {
+    background-color: var(--aegean-blue);
+    color: white;
+}
+
+@keyframes brilhoDivino {
+  0%, 100% {
+    /* Estado Inicial/Final: Brilho suave */
+    color: var(--gold-shiny); /* Cor do texto */
+    text-shadow:
+      0 0 10px rgba(255, 215, 0, 0.5),  /* Camada 1: Brilho perto */
+      0 0 20px rgba(255, 215, 0, 0.3),  /* Camada 2: Brilho médio */
+      0 0 30px rgba(218, 165, 32, 0.2); /* Camada 3: Brilho longe (mais escuro) */
+  }
+  50% {
+    /* Meio da animação: Brilho Intenso */
+    color: #ffe449; /* Texto fica ligeiramente branco no pico do brilho */
+    text-shadow:
+      0 0 20px rgba(255, 215, 0, 0.8),  /* Brilho forte perto */
+      0 0 40px rgba(255, 215, 0, 0.6),  /* Brilho forte médio */
+      0 0 60px rgba(255, 223, 0, 0.4),  /* Brilho forte longe */
+      0 0 80px rgba(218, 165, 32, 0.2); /* Aura externa */
+  }
+}
